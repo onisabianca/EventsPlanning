@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /social-events
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/social_events
+    username: root
+    password:
+
+social-events:
+  oauth:
+    client-id: "${clientId}"
+    client-secret: "${clientSecret}"
+
+services:
+  active-directory-business:
+    url:
+  oauth:
+    primary-api-host:
+
+springdoc:
+  swagger-ui:
+    path: /openapi/swagger-ui.html
+  api-docs:
+    path: /openapi/v3/api-docs
+  packagesToScan: com.project.internship.controller
+  pathsToMatch: /**
